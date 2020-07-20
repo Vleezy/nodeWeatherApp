@@ -28,7 +28,7 @@ request(url, function(err, response,body){
         if(weather.main == undefined){
             res.render('index', {weather : null, error : 'Memphis isnt a state'})
         } else{
-            let weatherText = `Its ${weather.main.temp} degress in ${weather.name}`
+            let weatherText = `Its ${weather.main.temp} degrees in ${weather.name}`
             res.render('index', {weather: weatherText, error:null})
         }
     } 
